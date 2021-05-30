@@ -1,5 +1,7 @@
+const files = require('./files');
+
 const existsMakefile = (filePath) => {
-    return true;
+    return files.fileExists(filePath);
 };
 
 const getCommands = (filePath) => {

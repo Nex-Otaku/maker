@@ -28,7 +28,9 @@ const mainLoop = async () => {
     const existsMakefile = await parser.existsMakefile(makefilePath);
 
     if (!existsMakefile) {
-        console.log('Makefile not found, nothing to do');
+        console.log('Makefile not found, nothing to do.');
+
+        return;
     }
 
     const commands = await parser.getCommands(makefilePath);
