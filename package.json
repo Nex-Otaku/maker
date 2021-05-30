@@ -17,5 +17,11 @@
     "menu"
   ],
   "author": "Nex Otaku",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "clear": "^0.1.0",
+    "inquirer": "^8.1.0",
+    "lodash": "^4.17.21",
+    "press-any-key": "^0.1.1"
+  }
 }
