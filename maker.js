@@ -40,6 +40,7 @@ const mainLoop = async () => {
         clear();
 
         const menuActions = ([]).concat(commands, [
+            new inquirer.Separator(),
             'Exit',
         ]);
 
