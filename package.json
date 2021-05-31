@@ -22,6 +22,8 @@
     "@kba/makefile-parser": "github:kba/makefile-parser",
     "child-process-promise": "^2.2.1",
     "clear": "^0.1.0",
+    "conf": "^10.0.1",
+    "crypto-js": "^4.0.0",
     "inquirer": "^8.1.0",
     "lodash": "^4.17.21",
     "press-any-key": "^0.1.1"

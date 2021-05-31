@@ -58,14 +58,10 @@ Option | Description
 
 ## To Be Done
 
- - Command selection from interactive menu
- - Last executed command is remembered
- - Jump back to menu after finished command
  - Mark command as "Favorite"
  - Hide command from list
- - Sort command automatically by usage statistics
  - Comment before a command is displayed as command name 
- - Exit by Escape, Ctrl + Q, Ctrl + C, Ctrl + X, Escape, F10
+ - Exit by Escape, Ctrl + Q, Ctrl + X, F10
  - Nice example Makefile in README
  - Screenshot showing Maker in action
 
