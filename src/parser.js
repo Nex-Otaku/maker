@@ -18,7 +18,7 @@ const parseMakefile = (filePath) => {
     return parsed.ast;
 }
 
-const getCommands = (filePath) => {
+const getTargets = (filePath) => {
     const ast = parseMakefile(filePath);
     let commands = [];
 
@@ -56,5 +56,5 @@ const getCommands = (filePath) => {
 
 module.exports = {
     existsMakefile: existsMakefile,
-    getCommands: getCommands,
+    getTargets: getTargets,
 };

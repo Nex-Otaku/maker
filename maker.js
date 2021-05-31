@@ -7,6 +7,36 @@ const parser = require('./src/parser');
 const runner = require('./src/runner');
 const ui = require('./src/ui');
 
+const getMakefileCommands = (targets) => {
+    let commands = [];
+
+    for (let i = 0; i < targets.length; i++) {
+        commands = commands.concat(targets[i].name);
+    }
+
+    return commands;
+}
+
+const makeMenuActions = (targets) => {
+    let choices = [];
+
+    for (let i = 0; i < targets.length; i++) {
+        const command = targets[i];
+
+        choices = choices.concat({
+            name: command.name + ' ' + command.firstComment,
+            value: command.name
+        });
+    }
+
+    choices = choices.concat([
+        new inquirer.Separator(),
+        'Exit',
+    ]);
+
+    return choices;
+};
+
 const selectAction = async (actions) => {
     let results = await inquirer.prompt([
         {
@@ -17,6 +47,7 @@ const selectAction = async (actions) => {
             pageSize: 50
         }
     ]);
+
     ui.newline();
 
     return results.action;
@@ -33,21 +64,18 @@ const mainLoop = async () => {
         return;
     }
 
-    const commands = await parser.getCommands(makefilePath);
+    const targets = await parser.getTargets(makefilePath);
+    const menuActions = makeMenuActions(targets);
+    const flatCommands = getMakefileCommands(targets);
     let running = true;
 
     while (running) {
         clear();
-
-        const menuActions = ([]).concat(commands, [
-            new inquirer.Separator(),
-            'Exit',
-        ]);
-
         const selectedAction = await selectAction(menuActions);
 
-        if (commands.includes(selectedAction)) {
-            await runner.run(selectedAction);
+        if (flatCommands.includes(selectedAction)) {
+            const output = await runner.run(selectedAction);
+            console.log(output);
         }
 
         if (selectedAction === 'Exit') {
