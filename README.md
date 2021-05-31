@@ -1,8 +1,8 @@
 # Maker
 
-Run commands from your **Makefile** selecting them from menu.
+Run commands from any **Makefile** selecting them from menu.
 
-![maker PNG](https://raw.githubusercontent.com/Nex-Otaku/maker/master/img/screenshot.jpg)
+![maker PNG](https://github.com/Nex-Otaku/maker/blob/master/img/screenshot.png?raw=true)
 
 ## Install
 
@@ -21,15 +21,26 @@ maker
 
 ## How it works
 
-- Reads your Makefile in current directory
+- Reads Makefile in current directory
 - Lists commands from Makefile in a nice menu
+
+## What's the profit?
+
+**Maker** does only one task - fast and convenient way to access all your precious Makefile commands.
+
+It doesn't require anything to run, all what needed is already in a Makefile.
+
+Before **Maker**, I had to remember all those "make bla bla" commands for every project I have. :tired_face:
+
+I don't have to remember them anymore! :stuck_out_tongue_winking_eye:
+
+Now I just type ```maker``` and command list is there. 
+
+No need look inside Makefile. Select and run, in seconds! :sparkles:  
 
 ## Features
 
 - Comment before a command is displayed as command name
-- First mega feature
-- Second mega feature
-- Third mega feature
 
 ## Example Makefile
 ```bash
@@ -61,7 +72,6 @@ Option | Description
 
  - Mark command as "Favorite"
  - Hide command from list
- - Screenshot showing Maker in action
 
 
 ## License
