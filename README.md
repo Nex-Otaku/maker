@@ -61,7 +61,6 @@ Option | Description
 
  - Mark command as "Favorite"
  - Hide command from list
- - Nice example Makefile in README
  - Screenshot showing Maker in action
 
 
