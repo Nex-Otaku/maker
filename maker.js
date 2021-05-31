@@ -7,6 +7,7 @@ const parser = require('./src/parser');
 const runner = require('./src/runner');
 const history = require('./src/history');
 const ui = require('./src/ui');
+const hotkeys = require('./src/hotkeys');
 
 const getMakefileCommands = (targets) => {
     let commands = [];
@@ -87,6 +88,7 @@ const mainLoop = async () => {
     }
 
     history.init(makefilePath);
+    hotkeys.init();
     const targets = await parser.getTargets(makefilePath);
     const menuActions = makeMenuActions(targets);
     const flatCommands = getMakefileCommands(targets);

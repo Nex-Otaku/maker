@@ -26,6 +26,7 @@ maker
 
 ## Features
 
+- Comment before a command is displayed as command name
 - First mega feature
 - Second mega feature
 - Third mega feature
@@ -60,8 +61,6 @@ Option | Description
 
  - Mark command as "Favorite"
  - Hide command from list
- - Comment before a command is displayed as command name 
- - Exit by Escape, Ctrl + Q, Ctrl + X, F10
  - Nice example Makefile in README
  - Screenshot showing Maker in action
 
