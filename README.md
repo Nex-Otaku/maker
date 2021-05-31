@@ -2,7 +2,7 @@
 
 Run commands from your **Makefile** selecting them from menu.
 
-<!-- Image showing Maker in action -->
+![maker PNG](https://raw.githubusercontent.com/Nex-Otaku/maker/master/img/screenshot.jpg)
 
 ## Install
 
