@@ -33,17 +33,17 @@ maker
 
 ## Example Makefile
 ```bash
-# Remove all temporary files from home
-foreach ~/*.tmp rm
+# Build app
+build:
+    ./bin/build.sh
 
-# List all files and directories in current directory
-foreach . echo
+# Run tests
+test:
+    ./vendor/bin/phpunit
 
-# List current Git branch for all projects
-foreach --directory ~/projects "cd <file> && git status | grep branch"
-
-# Change all Windows line endings to Unix (CRLF to LF)
-foreach --file --recursive ~/projects dos2unix
+# Deploy to production
+deploy:
+    ./bin/deploy.sh
 ```
 <!--
 ## Options
