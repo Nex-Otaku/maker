@@ -76,6 +76,20 @@ const selectAction = async (actions, defaultActionIndex) => {
     return results.action;
 };
 
+const excludeFakeTarget = (targets) => {
+    let result = [];
+
+    for (let i = 0; i < targets.length; i++) {
+        if (targets[i].name === 'no-command') {
+            continue;
+        }
+
+        result.push(targets[i]);
+    }
+
+    return result;
+}
+
 const mainLoop = async () => {
 
     const makefilePath = './Makefile';
@@ -89,7 +103,8 @@ const mainLoop = async () => {
 
     history.init(makefilePath);
     hotkeys.init();
-    const targets = await parser.getTargets(makefilePath);
+    const allTargets = await parser.getTargets(makefilePath);
+    const targets = excludeFakeTarget(allTargets);
     const menuActions = makeMenuActions(targets);
     const flatCommands = getMakefileCommands(targets);
     let running = true;
